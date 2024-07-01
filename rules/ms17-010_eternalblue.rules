@@ -1,0 +1,2 @@
+drop tcp any any -> any any (msg: "EXPLOIT Possible ETERNALBLUE SMB Exploit Attempt - Trans2 Request MultiplexID = 65 - MS17-010"; content:"|FF|SMB|32|"; offset:4; depth:5; content:"|41 00|"; distance:25; within:27; classtype:trojan-activity; sid:1000000;rev:1;)
+drop tcp any any -> any any (msg: "EXPLOIT Possible ETERNALBLUE SMB Exploit Attempt - Trans2 Request MultiplexID = 64 - MS17-010"; content:"|FF|SMB|a0|"; offset:4; depth:5; content:"|40 00|"; distance:25; within:27; classtype:trojan-activity; sid:1000001; rev:1;)
